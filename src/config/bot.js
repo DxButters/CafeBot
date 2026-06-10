@@ -425,7 +425,7 @@ export const botConfig = {
     cooldownActive: "Please wait {time} before using this command again.",
     errorOccurred: "An error occurred while executing this command.",
     missingPermissions:
-      "I am missing required permissions to perform this action.",
+      "Butters needs to give the permisions for this command💖.",
     commandDisabled: "This command has been disabled.",
     maintenanceMode: "The bot is currently in maintenance mode.",
   },

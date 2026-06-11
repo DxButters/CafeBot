@@ -12,7 +12,7 @@ export const botConfig = {
   // - "invisible" = appears offline
   presence: {
     // Current online state shown on Discord.
-    status: "online",
+    status: "dnd",
 
     // Activity lines shown under the bot name.
     // `type` number mapping from Discord:
@@ -56,7 +56,7 @@ export const botConfig = {
   applications: {
     // Default questions shown when someone fills out an application.
     defaultQuestions: [
-      { question: "What is your name?", required: true },
+      { question: "What is your username? (both ingame and discord)", required: true },
       { question: "How old are you?", required: true },
       { question: "Why do you want to join?", required: true },
     ],
@@ -136,7 +136,7 @@ export const botConfig = {
     },
     footer: {
       // Default footer text used in bot embeds.
-      text: "Titan Bot",
+      text: "CafeBot",
       // Footer icon URL (null = no icon).
       icon: null,
     },
@@ -300,18 +300,18 @@ export const botConfig = {
       // - "none"        = everyone is auto-verified immediately
       // - "account_age" = account must be older than set days
       // - "server_size" = auto-verify everyone only in smaller servers
-      defaultCriteria: "none",
+      defaultCriteria: "account_age",
 
       // Days used when `defaultCriteria` is `account_age`.
-      defaultAccountAgeDays: 7,
+      defaultAccountAgeDays: 30,
 
       // Member count threshold used when `defaultCriteria` is `server_size`.
       // Example: 1000 means auto-verify if server has fewer than 1000 members.
-      serverSizeThreshold: 1000,
+      serverSizeThreshold: 100,
 
       // Allowed safety limits for account-age requirements.
       // 1 = minimum day, 365 = maximum days.
-      minAccountAge: 1,      
+      minAccountAge: 15,      
       maxAccountAge: 365,    
 
       // If true, user receives a DM after verification.
@@ -359,15 +359,15 @@ export const botConfig = {
     // Welcome template posted when a user joins.
     // Placeholders: {user}, {server}, {memberCount}
     defaultWelcomeMessage:
-      "Welcome {user} to {server}! We now have {memberCount} members!",
+      "Welcome {user} to {server}! Hope you enjoy your stay! We now have {memberCount} members!",
     // Goodbye template posted when a user leaves.
     // Placeholders: {user}, {memberCount}
     defaultGoodbyeMessage:
-      "{user} has left the server. We now have {memberCount} members.",
+      "{user} has left the server. How sad. Unless you were banned. We now have {memberCount} members.",
     // Channel ID for welcome messages.
-    defaultWelcomeChannel: null,
+    defaultWelcomeChannel: 1514577175964287116,
     // Channel ID for goodbye messages.
-    defaultGoodbyeChannel: null,
+    defaultGoodbyeChannel: 1514577175964287116,
   },
 
   // =========================
@@ -427,7 +427,7 @@ export const botConfig = {
     missingPermissions:
       "Butters needs to give the permisions for this command💖.",
     commandDisabled: "This command has been disabled.",
-    maintenanceMode: "The bot is currently in maintenance mode.",
+    maintenanceMode: "Under going some changes! Be back soon!.",
   },
 
   // =========================
@@ -436,8 +436,8 @@ export const botConfig = {
   // Set any feature to `false` to disable it globally.
   features: {
     // Core systems.
-    economy: true,
-    leveling: true,
+    economy: false,
+    leveling: false,
     moderation: true,
     logging: true,
     welcome: true,
@@ -445,7 +445,7 @@ export const botConfig = {
     // Community engagement systems.
     tickets: true,
     giveaways: true,
-    birthday: true,
+    birthday: false,
     counter: true,
 
     // Security and self-service systems.
